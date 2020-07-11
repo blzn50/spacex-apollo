@@ -1,14 +1,6 @@
 const { gql } = require('apollo-server');
 
 const typeDefs = gql`
-  type Launch {
-    id: ID!
-    site: String!
-    mission: Mission
-    rocket: Rocket
-    isBooked: Boolean!
-  }
-
   type Rocket {
     id: ID!
     name: String
@@ -23,6 +15,14 @@ const typeDefs = gql`
   enum PatchSize {
     SMALL
     LARGE
+  }
+
+  type Launch {
+    id: ID!
+    site: String!
+    mission: Mission
+    rocket: Rocket
+    isBooked: Boolean!
   }
 
   type User {
