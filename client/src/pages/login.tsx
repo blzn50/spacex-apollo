@@ -11,6 +11,7 @@ export const LOGIN_USER = gql`
     login(email:$email)
   }
 `
+
 export default function Login() {
   const client: ApolloClient<any> = useApolloClient();
   const [login, {loading, error}] = useMutation<LoginTypes.login, LoginTypes.loginVariables>(LOGIN_USER,{
